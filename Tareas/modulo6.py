@@ -42,3 +42,26 @@ def is_prime(n):
         is_prime= False
         break
   return is_prime
+
+
+def imprimir_mayor(diccionario,maximo):
+    for x in diccionario.items():
+        if (maximo==x[1]):
+            print(x)
+    
+
+def contar_elementos(lista):
+    max=0
+    dicc={}
+    uni=list(set(lista))
+    for count,x in enumerate(uni):
+        count=0
+        for i in lista:
+            if(x==i):
+                count+=1
+        
+        if(count>max):
+            max=count   
+        dicc['Elemento '+str(x)]=count
+    
+    imprimir_mayor(dicc,max)
